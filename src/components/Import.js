@@ -8,13 +8,7 @@ import { Button, Table, TableHead, TableBody, TableRow, TableCell, Container, Ta
 const Import = (props) => {
     // fill out this component
     
-    // const rows = [
-    //     createData('Frozen yoghurt', 159, 6.0),
-    //     createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-    //     createData('Eclair', 262, 16.0, 24, 6.0),
-    //     createData('Cupcake', 305, 3.7, 67, 4.3),
-    //     createData('Gingerbread', 356, 16.0, 49, 3.9),
-    //   ];
+   
       
     return (
         <div>
@@ -35,15 +29,15 @@ const Import = (props) => {
           {props.makes.map((make, index) => (
             
             <TableRow
-              key={make.id}
+              key={make.MakeId}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
                
               <TableCell component="th" scope="row">
-                {make.id}
+                {make.MakeId}
               </TableCell>
 
-              <TableCell align="right">{make.name}</TableCell>
+              <TableCell align="right">{make.MakeName}</TableCell>
               {/* <TableCell align="right">{make.name}</TableCell>
               <TableCell align="right">{props.make.actions}</TableCell>  */}
             </TableRow>
