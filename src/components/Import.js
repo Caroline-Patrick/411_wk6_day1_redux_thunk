@@ -13,6 +13,7 @@ const Import = (props) => {
           <br></br>
         <Button onClick={props.fetchMakes} variant="contained">Import </Button >
         <br></br>
+        <h2>COUNT: {props.makes.length}</h2>
         <br></br>
         <TableContainer component={Paper}>
             

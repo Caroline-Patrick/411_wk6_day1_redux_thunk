@@ -45,8 +45,7 @@ function BasicMenu({deleteMake}) {
       }}
     >
         <MenuItem onClick={handleDeleteMake}>Delete</MenuItem>
-        <MenuItem onClick={handleClose}>My account</MenuItem>
-        <MenuItem onClick={handleClose}>Logout</MenuItem>
+        
       </Menu>
       </div>
   );
