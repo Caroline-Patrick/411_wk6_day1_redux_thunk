@@ -1,11 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Button, Table, TableHead, TableBody, TableRow, TableCell, Container, TableContainer, Paper } from '@mui/material';
-
-import BasicMenu from "./BasicMenu"
+import Pagination from '@mui/material/Pagination';
+import Stack from '@mui/material/Stack';
+import BasicMenu from "./BasicMenu";
 
 
 const Import = (props) => {
-    // fill out this component
+    // set state of page to keep track of current page number
+    const [page, setPage] = useState(1);
+    const rowsPerPage =20; //number of rows to display per page
+
+      // get the current page of data based on the current page number and rows per page
+    const currentData = props.makes.slice((page -1) *rowsPerPage, page * rowsPerPage)
     
     return (
         <Container>
@@ -28,7 +34,7 @@ const Import = (props) => {
         </TableHead>
         <TableBody>
             
-          {props.makes.map((make, index) => (
+          {currentData.map((make, index) => (
             
             <TableRow
               key={make.MakeId}
@@ -47,8 +53,16 @@ const Import = (props) => {
             </TableRow>
           ))}
         </TableBody>
+
       </Table>
     </TableContainer>
+    <Stack spacing={2}>
+      <Pagination
+      count={Math.ceil(props.makes.length / rowsPerPage)}
+      page= {page}
+      onChange={(event, value)=> setPage(value)}
+      />
+    </Stack>
         
         </Container>
     )
