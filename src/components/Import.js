@@ -1,25 +1,26 @@
 import React from 'react';
 import { Button, Table, TableHead, TableBody, TableRow, TableCell, Container, TableContainer, Paper } from '@mui/material';
-// import Button from '@mui/material/Button'
-// function createData(name, calories, fat, carbs, protein) {
-//     return { name, calories, fat, carbs, protein };
-//   }
+
+import BasicMenu from "./BasicMenu"
+
 
 const Import = (props) => {
     // fill out this component
     
-   
-      
     return (
-        <div>
+        <Container>
+          <br></br>
+          <br></br>
         <Button onClick={props.fetchMakes} variant="contained">Import </Button >
+        <br></br>
+        <br></br>
         <TableContainer component={Paper}>
             
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
             <TableCell>ID</TableCell>
-            <TableCell align="right">Make</TableCell>
+            <TableCell align="left">Make</TableCell>
             <TableCell align="right">Actions</TableCell>
           
           </TableRow>
@@ -37,16 +38,18 @@ const Import = (props) => {
                 {make.MakeId}
               </TableCell>
 
-              <TableCell align="right">{make.MakeName}</TableCell>
-              {/* <TableCell align="right">{make.name}</TableCell>
-              <TableCell align="right">{props.make.actions}</TableCell>  */}
+              <TableCell align="left">{make.MakeName}</TableCell>
+              <TableCell align="right">{<BasicMenu 
+                                        deleteMake={()=> props.deleteMake(index)}
+                                        />}</TableCell>
+              
             </TableRow>
           ))}
         </TableBody>
       </Table>
     </TableContainer>
         
-        </div>
+        </Container>
     )
 }
 
