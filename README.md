@@ -19,12 +19,6 @@ This project showcases a mock-import utility for a cars application. The applica
 - **UI & Styling**: `@mui/material`, `@mui/icons-material`, `@emotion/react`, `@emotion/styled`
 - **Data Visualization**: `react-minimal-pie-chart`
 
-### Scripts:
-
-- **Development Server**: `npm start`
-- **Build**: `npm build`
-- **Testing**: `npm test`
-
 ## Visual Representation
 
 ![1](./images/dashboard.png)
