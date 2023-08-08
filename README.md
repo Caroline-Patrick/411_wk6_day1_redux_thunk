@@ -27,8 +27,7 @@ This project showcases a mock-import utility for a cars application. The applica
 
 ## Visual Representation
 
-![1](./images/411_wk6_1-1.png)
-![2](./images/411_wk6_1-2.png)
-![3](./images/411_wk6_1-3.png)
+![1](./images/dashboard.png)
+![2](./images/home.png)
 
 
